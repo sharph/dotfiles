@@ -1,0 +1,7 @@
+[user]
+	name = Sharp Hall
+	email = sharp@sauropod.org
+[core]
+	editor = vim
+[color]
+	ui = true
