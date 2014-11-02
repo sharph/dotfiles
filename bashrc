@@ -109,4 +109,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export TERM=xterm-256color
+if [ $TERM == 'xterm' ]
+then
+    export TERM=xterm-256color
+fi
+if [ $TERM == 'screen' ]
+then
+    export TERM=screen-256color
+fi

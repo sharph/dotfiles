@@ -26,6 +26,7 @@ NeoBundle 'docunext/closetag.vim'
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'derekwyatt/vim-scala'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -62,3 +63,5 @@ let g:lightline = {
       \ }
 
 set laststatus=2
+
+set colorcolumn=80,100
