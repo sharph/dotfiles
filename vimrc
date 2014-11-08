@@ -65,3 +65,6 @@ let g:lightline = {
 set laststatus=2
 
 set colorcolumn=80,100
+
+set mouse=a
+set list listchars=tab:»·,trail:·
