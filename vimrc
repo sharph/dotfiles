@@ -71,7 +71,7 @@ nnoremap <Down> :echoe "Use j"<CR>
 set laststatus=2
 
 set colorcolumn=80,100
-"highlight ColorColumn guibg=grey ctermbg=8
+highlight ColorColumn guibg=grey ctermbg=8
 
 
 set mouse=a
