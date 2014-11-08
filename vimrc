@@ -43,7 +43,6 @@ NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
 
-syntax on
 set number
 " set foldmethod=indent
 " set foldlevel=99
@@ -51,20 +50,29 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-colorscheme babymate256
+set t_Co=256
+
+syntax on
+colorschem mustang
+set background=dark
+let g:indent_guides_auto_colors = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
 
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
+"let g:lightline = {
+""      \ 'colorscheme': 'wombat',
+""      \ }
 
 set laststatus=2
 
 set colorcolumn=80,100
+"highlight ColorColumn guibg=grey ctermbg=8
+
 
 set mouse=a
 set list listchars=tab:»·,trail:·
