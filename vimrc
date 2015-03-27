@@ -27,6 +27,8 @@ NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'Lokaltog/vim-easymotion'
+
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -76,3 +78,6 @@ highlight ColorColumn guibg=grey ctermbg=8
 
 set mouse=a
 set list listchars=tab:»·,trail:·
+
+map  <Leader>/ <Plug>(easymotion-sn)
+omap <Leader>/ <Plug>(easymotion-tn)
