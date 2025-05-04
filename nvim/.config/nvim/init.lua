@@ -970,5 +970,7 @@ vim.keymap.set('n', '<leader>n', function()
   vim.o.relativenumber = not vim.o.relativenumber
 end, { desc = 'Toggle relative [n]umber' })
 
+vim.o.tabstop = 4
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
