@@ -609,7 +609,26 @@ require('lazy').setup({
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
-        -- rust_analyzer = {},
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              cargo = {
+                allFeatures = true,
+                loadOutDirsFromCheck = true,
+                runBuildScripts = true,
+              },
+              -- Add clippy lints for Rust.
+              check = {
+                allFeatures = true,
+                command = 'clippy',
+                extraArgs = {
+                  '--',
+                  '--no-deps',
+                },
+              },
+            },
+          },
+        },
         -- ruff_lsp = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -654,7 +673,6 @@ require('lazy').setup({
         'markdownlint',
         'pyright',
         'ruff',
-        'rust-analyzer',
         'stylua',
         'svelte-language-server',
         'typescript-language-server',
@@ -662,8 +680,11 @@ require('lazy').setup({
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
+        ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+        automatic_installation = false,
         handlers = {
           function(server_name)
+            vim.notify(server_name)
             local server = servers[server_name] or {}
             -- This handles overriding only values explicitly passed
             -- by the server configuration above. Useful when disabling
@@ -673,6 +694,7 @@ require('lazy').setup({
           end,
         },
       }
+      vim.lsp.config('rust_analyzer', servers['rust_analyzer'])
     end,
   },
 
