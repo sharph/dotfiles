@@ -14,3 +14,6 @@ fish_add_path "/usr/lib/cargo/bin/coreutils"
 
 # alias ssh="kitty +kitten ssh"
 alias ls=lsd
+
+# Added by Radicle.
+export PATH="$PATH:/home/sharp/.radicle/bin"
