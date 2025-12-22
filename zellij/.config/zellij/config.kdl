@@ -158,10 +158,10 @@ keybinds clear-defaults=true {
         bind "Alt down" { MoveFocus "down"; }
         bind "Alt up" { MoveFocus "up"; }
         bind "Alt right" { MoveFocusOrTab "right"; }
-        bind "Ctrl h" { MessagePlugin { name "nvim_nav_left"; payload "8"; }; }
+        bind "Ctrl h" { MessagePlugin { name "nvim_nav_left_tab"; payload "8"; }; }
         bind "Ctrl j" { MessagePlugin { name "nvim_nav_down"; payload "10"; }; }
         bind "Ctrl k" { MessagePlugin { name "nvim_nav_up"; payload "11"; }; }
-        bind "Ctrl l" { MessagePlugin { name "nvim_nav_right"; payload "12"; }; }
+        bind "Ctrl l" { MessagePlugin { name "nvim_nav_right_tab"; payload "12"; }; }
     }
     shared_except "locked" "scroll" "search" "tmux" {
         bind "Ctrl b" { SwitchToMode "tmux"; }
@@ -269,7 +269,9 @@ plugins {
 // eg. "file:/path/to/my-plugin.wasm"
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
-    nvim-nav
+    nvim-nav {
+        match_commands "vim,nvim,tukai"
+    }
     "https://github.com/dj95/zjstatus/releases/latest/download/zjframes.wasm" {
         hide_frame_for_single_pane       "true"
         hide_frame_except_for_search     "true"
