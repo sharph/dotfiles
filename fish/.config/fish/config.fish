@@ -8,7 +8,7 @@ starship init fish | source
 
 
 # uv
-fish_add_path "/home/sharp/.local/bin"
+fish_add_path "~/.local/bin"
 
 fish_add_path "/usr/lib/cargo/bin/coreutils"
 
@@ -17,6 +17,6 @@ alias ls="eza --git --icons=auto"
 alias cat=bat
 
 # Added by Radicle.
-export PATH="$PATH:/home/sharp/.radicle/bin"
+export PATH="$PATH:~/.radicle/bin"
 
 zoxide init fish | source
