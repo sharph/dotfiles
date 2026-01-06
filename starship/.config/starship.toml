@@ -1,5 +1,5 @@
 format = """
-[  ](bg:#a3aed2 fg:#090c0c)\
+$os\
 $hostname\
 [](bg:#769ff0 fg:#a3aed2)\
 $directory\
@@ -16,6 +16,15 @@ $php\
 $time\
 [ ](fg:#1d2230)\
 \n$character"""
+
+[os]
+style = "bg:#a3aed2 fg:#090c0c"
+disabled = false
+
+[os.symbols]
+Android = "  "
+NixOS = "  "
+Debian = "  "
 
 [hostname]
 format = "[$hostname]($style)"
