@@ -9,15 +9,13 @@ fish_config theme choose TokyoNight\ Night
 
 starship init fish | source
 
-fish_add_path "$HOME/.local/bin"
-fish_add_path "$HOME/.cargo/bin"
-
-fish_add_path "/usr/lib/cargo/bin/coreutils"
-
 alias ls="eza --git --icons=auto"
 alias cat=bat
+alias vi=nvim
 
 # Added by Radicle.
 export PATH="$PATH:$HOME/.radicle/bin"
+
+nvm use latest --silent
 
 zoxide init fish | source

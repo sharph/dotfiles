@@ -1,1 +1,0 @@
-source "/home/sharp/.deno/env.fish"
